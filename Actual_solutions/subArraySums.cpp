@@ -3,9 +3,9 @@
 using namespace std;
 
 int maxSubArray(vector<int>& nums) {
-    int maxSum = nums[0];
-    int currentSum = nums[0];
-    for(int i = 1; i < nums.size(); i++){
+    int maxSum = INT_MIN;
+    int currentSum = 0;
+    for(int i = 0; i < nums.size(); i++){
         currentSum = currentSum + nums[i];
         maxSum = currentSum > maxSum? currentSum: maxSum;
         currentSum = currentSum < 0? 0: currentSum;
@@ -14,7 +14,7 @@ int maxSubArray(vector<int>& nums) {
 }
 
 int main() {
-    vector<int>vec1 = {3,-4};
+    vector<int>vec1 = {-1,-2,-4};
     cout<<maxSubArray(vec1);
     return 0;
 }
