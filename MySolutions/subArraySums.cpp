@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <math.h> 
 using namespace std;
 
 int maxSubArray(vector<int>& nums) {
@@ -12,7 +13,7 @@ int maxSubArray(vector<int>& nums) {
                 subArraySums.push_back(result);
             }
         }
-        int ans = 0;
+        int ans = -pow(2,31);
         for(int vals:subArraySums){
             if(vals > ans ){
                 ans = vals;
