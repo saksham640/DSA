@@ -18,9 +18,9 @@ vector <int> productOfArrayExceptSelf(vector <int>& nums){
 }
 
 int main() {
-    vector <int> nums = {1,2,3};
-    vector <int> nigga = productOfArrayExceptSelf(nums);
-    for(int vals: nigga){
+    vector <int> nums = {10,38,11,2};
+    vector <int> ans = productOfArrayExceptSelf(nums);
+    for(int vals: ans){
         cout<<vals<<" ";
     }
     return 0;
