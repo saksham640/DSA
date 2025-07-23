@@ -13,7 +13,7 @@ int peakElementInMountainArray(vector<int> arr){
         int middle = start + (end - start)/2;
 
         //condition for peak element:
-        if(middle > 0 || middle < arr.size()){  //if middle exists
+        if(middle > 0 && middle < arr.size()){  //if middle exists
             if(arr[middle] > arr[middle + 1] && arr[middle] > arr[middle - 1]){     //would only be checked if middle exists
                 return middle;
             }
