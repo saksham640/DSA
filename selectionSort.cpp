@@ -8,17 +8,19 @@ using namespace std;
 
 vector <int> selectionSort(vector <int> arr){
     for(int i = 0; i < arr.size(); i++){
+        int smallestIdx = i;
         for(int j = i; j < arr.size(); j++){
-            if(arr[j] < arr[i]){
-                swap(arr[j],arr[i]);
+            if(arr[j] < arr[smallestIdx]){
+                smallestIdx = j;
             }
         }
+        swap(arr[i], arr[smallestIdx]);
     }
     return arr;
 }
 
 int main() {
-    vector <int> arr = {99,24,5,66,8,5,3,66,3,0};
+    vector <int> arr = {9,8,7,6,5,4,3,2,1};
     arr = selectionSort(arr);
     for(int vals: arr){
         cout<<vals<<" ";
